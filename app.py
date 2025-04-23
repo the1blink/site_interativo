@@ -3,10 +3,8 @@ from flask import Flask, render_template, request, session, url_for, redirect
 
 app = Flask(__name__)
 
-# Chave secreta para usar sessões
-app.secret_key = 'projeto147'  # Substitua por uma chave segura
+app.secret_key = 'projeto147'  
 
-# Lista de tópicos atualizada (5 tópicos)
 topics = [
     {"name": "Condições e Meio Ambiente de Trabalho na Indústria da Construção", "url": "/conditions"},
     {"name": "Equipamentos de Proteção Individual (EPIs)", "url": "/epis"},
@@ -15,7 +13,6 @@ topics = [
     {"name": "Segurança no Trabalho em Máquinas e Equipamentos", "url": "/machines"}
 ]
 
-# Perguntas do quiz (placeholder, serão substituídas por você)
 quiz_questions = [
     {
         "text": "Pergunta sobre Condições (NR-18): O que é obrigatório no canteiro de obras?",
@@ -76,16 +73,13 @@ def machines():
 
 @app.route('/quiz', methods=['GET', 'POST'])
 def quiz():
-    # Inicializar a sessão do quiz
     if 'quiz_answers' not in session:
         session['quiz_answers'] = []
         session['current_question_index'] = 0
 
     total_questions = len(quiz_questions)
 
-    # Verificar se o quiz foi concluído
     if session['current_question_index'] >= total_questions:
-        # Calcular a pontuação
         score = 0
         answers = []
         for i, user_answer in enumerate(session['quiz_answers']):
@@ -94,18 +88,15 @@ def quiz():
                 score += 1
             answers.append((quiz_questions[i], user_answer, correct_answer))
 
-        # Resetar a sessão para permitir novo quiz
         session.pop('quiz_answers', None)
         session.pop('current_question_index', None)
 
         return render_template('quiz.html', quiz_completed=True, score=score, total_questions=total_questions, answers=answers)
 
-    # Mostrar a pergunta atual
     current_question_index = session['current_question_index']
     current_question = quiz_questions[current_question_index]
 
     if request.method == 'POST':
-        # Salvar a resposta do usuário
         user_answer = int(request.form['answer'])
         session['quiz_answers'].append(user_answer)
         session['current_question_index'] += 1
