@@ -15,7 +15,6 @@
         </header>
         <main>
             {% if not quiz_completed %}
-                <!-- Mostrar a pergunta atual -->
                 <div class="question">
                     <h2>{{ current_question.text }}</h2>
                     <form method="POST" action="{{ url_for('quiz') }}">
@@ -30,7 +29,6 @@
                     </form>
                 </div>
             {% else %}
-                <!-- Mostrar resultados -->
                 <div class="results">
                     <p>Você acertou {{ score }} de {{ total_questions }} perguntas!</p>
                     <h3>Gabarito:</h3>
