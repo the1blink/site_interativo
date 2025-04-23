@@ -1,0 +1,84 @@
+/* welcome.css */
+
+/* Estilizando o header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Espaço entre a logo e o texto */
+}
+
+.logo {
+    width: 40%;
+    max-width: 250px;
+    animation: fadeIn 1s ease-in;
+    display: block;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: #1C2526; /* Preto da paleta */
+    max-width: 200px; /* Limite para o texto quebrar em várias linhas */
+    text-align: left;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Estilizando o botão */
+main {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #F15A24;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    animation: fadeIn 1s ease-in 0.5s forwards;
+    opacity: 0;
+}
+
+.button:hover {
+    background-color: #D94A1E; /* Tom mais escuro do laranja */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column; /* Em telas pequenas, o texto fica abaixo da logo */
+        align-items: center;
+    }
+
+    .logo {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+        max-width: 100%; /* Permite que o texto use toda a largura disponível */
+        text-align: center;
+    }
+
+    .button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+@media (min-width: 601px) {
+    .button {
+        font-size: 1.5rem;
+        padding: 1.2rem 2.5rem;
+    }
+}

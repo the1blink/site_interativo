@@ -1,0 +1,173 @@
+/* quiz.css */
+
+/* Estilizando o título do quiz */
+.quiz-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1C2526;
+    text-align: center;
+    margin-bottom: 2rem;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Estilizando a pergunta */
+.question {
+    margin-bottom: 2rem;
+}
+
+.question h2 {
+    font-size: 1.8rem;
+    color: #1C2526;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Estilizando as opções em um grid 2x2 */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilizando cada botão de opção */
+.option-button {
+    background-color: #FF7F50; /* Tom de laranja claro */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.option-button:hover {
+    background-color: #FF9F80; /* Tom mais claro ao passar o mouse */
+}
+
+/* Estilizando o botão "Próxima Pergunta" */
+.next-button {
+    display: block;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+}
+
+.next-button:hover {
+    background-color: #333333;
+}
+
+/* Estilizando os resultados */
+.results {
+    text-align: center;
+}
+
+.results h2 {
+    font-size: 2rem;
+    color: #1C2526;
+    margin-bottom: 1rem;
+}
+
+.results p {
+    font-size: 1.5rem;
+    color: #1C2526;
+    margin-bottom: 1.5rem;
+}
+
+.results h3 {
+    font-size: 1.8rem;
+    color: #1C2526;
+    margin-bottom: 1rem;
+}
+
+/* Estilizando o gabarito */
+.results ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.results li {
+    font-size: 1.2rem;
+    color: #1C2526;
+    /*margin-top: 2rem;*/
+    margin-bottom: 1.5rem;
+    text-align: left;
+    padding: 0 1rem;
+}
+
+.results li .user-answer {
+    color: #FF0000; /* Vermelho para a resposta do usuário, se errada */
+}
+
+.results li .correct-answer {
+    color: #28a745; /* Verde para a resposta correta */
+}
+
+/* Estilizando o botão "Voltar ao Sumário" */
+.back-button {
+    display: inline-block;
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333333;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .quiz-title {
+        font-size: 2rem;
+    }
+
+    .question h2 {
+        font-size: 1.5rem;
+    }
+
+    .options-grid {
+        grid-template-columns: 1fr; /* Empilhar os botões em uma coluna em telas menores */
+        grid-gap: 0.8rem;
+    }
+
+    .option-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .next-button, .back-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .results h2 {
+        font-size: 1.8rem;
+    }
+
+    .results p {
+        font-size: 1.3rem;
+    }
+
+    .results h3 {
+        font-size: 1.5rem;
+    }
+
+    .results li {
+        font-size: 1rem;
+    }
+}

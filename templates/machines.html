@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança no Trabalho em Máquinas e Equipamentos</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">NR-12 – Segurança no Trabalho em Máquinas e Equipamentos</h1>
+            <!-- Imagem no topo -->
+            <img src="{{ url_for('static', filename='machines-image.jpg') }}" alt="Imagem ilustrativa sobre segurança em máquinas e equipamentos" class="topic-image fade-in">
+        </header>
+        <main>
+            <p class="intro fade-in">
+                A Norma Regulamentadora nº 12 (NR-12) estabelece as medidas preventivas para garantir a segurança dos trabalhadores envolvidos com a instalação, operação, manutenção e inspeção de máquinas e equipamentos, em qualquer setor da economia.
+            </p>
+            <h2 class="section-title fade-in">Pontos-chave da NR-12:</h2>
+            <div class="key-points">
+                <p class="key-point fade-in">
+                    <strong>Objetivo:</strong> Assegurar que todas as máquinas e equipamentos sejam seguros para os trabalhadores, reduzindo ao máximo o risco de acidentes durante seu ciclo de vida útil.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Abrangência:</strong> Aplica-se a máquinas novas e usadas, tanto nacionais quanto importadas, exigindo que estejam em conformidade com os requisitos de segurança previstos.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Projetos e Instalações:</strong> Devem considerar:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Princípios ergonômicos.</li>
+                    <li>Acessibilidade para manutenção.</li>
+                    <li>Proteção contra partes móveis.</li>
+                    <li>Isolamento de fontes de energia perigosas.</li>
+                </ul>
+                <p class="key-point fade-in">As áreas ao redor das máquinas devem ser sinalizadas e organizadas.</p>
+            
+                <p class="key-point fade-in">
+                    <strong>Dispositivos de Segurança Obrigatórios:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Proteções fixas ou móveis que impeçam o contato com partes perigosas.</li>
+                    <li>Dispositivos de parada de emergência em local de fácil acesso.</li>
+                    <li>Sistemas de intertravamento, bloqueio e retenção de energia durante manutenção.</li>
+                    <li>Sinalização de segurança visível.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Treinamento dos Trabalhadores:</strong> Os operadores devem ser capacitados com treinamento específico sobre:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Riscos da máquina.</li>
+                    <li>Procedimentos seguros de operação e emergência.</li>
+                    <li>Uso correto dos dispositivos de segurança.</li>
+                </ul>
+                <p class="key-point fade-in">O treinamento deve ser documentado e reaplicado sempre que houver mudança de função, equipamento ou processo.</p>
+            
+                <p class="key-point fade-in">
+                    <strong>Manutenção, Inspeção e Limpeza:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Devem ser realizadas com a máquina parada e isolada, salvo em casos específicos com procedimentos seguros.</li>
+                    <li>É obrigatório o uso de ferramentas apropriadas e EPIs/EPCs.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades do Empregador:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Garantir que todas as máquinas estejam em conformidade com a NR-12.</li>
+                    <li>Realizar análises de risco e implementar medidas de proteção.</li>
+                    <li>Garantir condições adequadas de operação, iluminação e ventilação.</li>
+                </ul>
+            </div>
+            
+            <a href="{{ url_for('summary') }}" class="button fade-in">Voltar ao Sumário</a>
+            <a href="{{ url_for('quiz') }}" class="button fade-in">Quiz</a>
+        </main>
+    </div>
+</body>
+</html>

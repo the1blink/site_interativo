@@ -1,0 +1,82 @@
+/* summary.css */
+
+/* Estilizando o header */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.title {
+    font-size: 2rem;
+    color: #1C2526; /* Preto da paleta */
+    animation: fadeIn 1s ease-in;
+}
+
+/* Estilizando os botões de tópicos */
+.topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Duas colunas de largura igual */
+    gap: 1rem; /* Espaço entre os botões */
+    width: 100%;
+    justify-items: center; /* Centraliza os botões dentro de cada célula da grade */
+}
+
+.topic-button {
+    display: inline-block;
+    background-color: #1C2526; /* Preto da paleta */
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    width: 100%; /* Ocupa toda a largura da célula da grade */
+    max-width: 300px; /* Limite de largura */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: fadeIn 1s ease-in forwards;
+    opacity: 0;
+}
+
+/* Atraso escalonado para os 5 botões */
+.topic-button:nth-child(1) { animation-delay: 0.1s; }
+.topic-button:nth-child(2) { animation-delay: 0.2s; }
+.topic-button:nth-child(3) { animation-delay: 0.3s; }
+.topic-button:nth-child(4) { animation-delay: 0.4s; }
+.topic-button:nth-child(5) { animation-delay: 0.5s; }
+
+.topic-button:hover {
+    background-color: #333; /* Tom mais claro de preto */
+    transform: scale(1.02); /* Leve aumento de escala no hover */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .topics {
+        display: flex; /* Volta para uma única coluna em telas pequenas */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topic-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+        width: 90%; /* Ajusta para ocupar quase toda a largura da área central */
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 601px) {
+    .title {
+        font-size: 2rem;
+    }
+
+    .topic-button {
+        font-size: 1.1rem;
+        padding: 1rem;
+    }
+}

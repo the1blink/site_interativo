@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumário</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='summary.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">Sumário</h1>
+        </header>
+        <main class="topics">
+            {% for topic in topics %}
+                <a href="{{ topic.url }}" class="topic-button fade-in">{{ topic.name }}</a>
+            {% endfor %}
+            <a href="{{ url_for('quiz') }}" class="topic-button fade-in">Ir para o Quiz</a>
+        </main>
+    </div>
+</body>
+</html>

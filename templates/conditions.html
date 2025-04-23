@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições e Meio Ambiente de Trabalho</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">NR-18 – Condições e Meio Ambiente de Trabalho na Indústria da Construção</h1>
+            <!-- Imagem no topo -->
+            <img src="{{ url_for('static', filename='conditions-image.jpg') }}" alt="Imagem ilustrativa sobre condições de trabalho na construção" class="topic-image fade-in">
+        </header>
+        <main>
+            <p class="intro fade-in">
+                A Norma Regulamentadora nº 18 (NR-18) define diretrizes e exigências para garantir a segurança e a saúde dos trabalhadores nos canteiros de obras. Seu foco é a organização do ambiente de trabalho, o controle de riscos, e a prevenção de acidentes na construção civil.
+            </p>
+            <h2 class="section-title fade-in">Pontos-chave da NR-18:</h2>
+            <div class="key-points">
+                <p class="key-point fade-in">
+                    <strong>Abrangência:</strong> Aplica-se a todas as atividades da indústria da construção, incluindo obras de edificações, reformas, demolições, escavações, fundações, estruturas e instalações.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Organização do Canteiro de Obras:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>O canteiro deve ser planejado e organizado, com sinalização clara e medidas de proteção coletiva.</li>
+                    <li>Devem existir áreas definidas para armazenamento de materiais, circulação de trabalhadores e acesso seguro.</li>
+                    <li>É obrigatório manter boas condições de iluminação, ventilação e limpeza.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Instalações Sanitárias e de Convivência:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Os trabalhadores devem ter acesso a banheiros adequados, vestiários, chuveiros, refeitórios e local para descanso.</li>
+                    <li>A água fornecida deve ser potável, com pontos de distribuição de fácil acesso.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Gestão de Riscos:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>O empregador deve elaborar e implementar o Programa de Gerenciamento de Riscos (PGR) específico para o canteiro.</li>
+                    <li>É obrigatória a Análise Preliminar de Risco (APR) para atividades críticas.</li>
+                    <li>Devem ser adotadas medidas preventivas para quedas, soterramentos, choques elétricos, ruído, poeira e manipulação de materiais.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Equipamentos de Proteção:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Os Equipamentos de Proteção Coletiva (EPCs), como guarda-corpos, redes e sinalização, devem ser prioritariamente adotados.</li>
+                    <li>O uso de EPIs (capacete, bota, luva, cinto de segurança, etc.) é obrigatório quando houver risco residual.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Treinamento e Capacitação:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Todos os trabalhadores devem receber integração antes de iniciarem as atividades, com noções básicas de segurança no canteiro.</li>
+                    <li>Para funções específicas, é exigido treinamento adicional (ex: trabalho em altura, operação de máquinas, etc.).</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>É responsabilidade do empregador garantir o cumprimento da NR-18, fiscalizar o uso dos EPIs e manter as condições adequadas de trabalho.</li>
+                    <li>Os trabalhadores também têm o dever de seguir as orientações de segurança e comunicar situações de risco.</li>
+                </ul>
+            </div>
+            
+            <a href="{{ url_for('summary') }}" class="button fade-in">Voltar ao Sumário</a>
+            <a href="{{ url_for('epis') }}" class="button fade-in">Próximo Tópico</a>
+        </main>
+    </div>
+</body>
+</html>

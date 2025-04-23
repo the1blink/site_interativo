@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança na Obra - Inicial</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='welcome.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo Grupo Estrutural MJV Serviços" class="logo fade-in">
+                <h1 class="title fade-in">Segurança na Construção Civil</h1>
+            </div>
+        </header>
+        <main>
+            <a href="{{ url_for('summary') }}" class="button fade-in">Ver sumário</a>
+        </main>
+    </div>
+</body>
+</html>

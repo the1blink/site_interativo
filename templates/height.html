@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho em Altura</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">NR-35 – Trabalho em Altura</h1>
+            <!-- Imagem no topo -->
+            <img src="{{ url_for('static', filename='height-image.jpg') }}" alt="Imagem ilustrativa sobre trabalho em altura" class="topic-image fade-in">
+        </header>
+        <main>
+            <p class="intro fade-in">
+                A Norma Regulamentadora nº 35 (NR-35) estabelece os requisitos mínimos para a execução de trabalhos em altura com segurança, visando à prevenção de acidentes e à preservação da vida dos trabalhadores.
+            </p>
+            <h2 class="section-title fade-in">Pontos-chave da NR-35:</h2>
+            <div class="key-points">
+                <p class="key-point fade-in">
+                    <strong>Definição de Trabalho em Altura:</strong> Considera-se trabalho em altura toda atividade executada acima de 2 metros do nível inferior, onde haja risco de queda.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades do Empregador:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Garantir a implementação das medidas de proteção antes do início do trabalho.</li>
+                    <li>Assegurar a realização da Análise de Risco (AR) e, se necessário, da Permissão de Trabalho (PT).</li>
+                    <li>Desenvolver e implementar procedimentos operacionais padronizados.</li>
+                    <li>Prover capacitação e treinamento aos trabalhadores (mínimo de 8 horas, com reciclagem bienal ou quando houver mudança de função/acidente).</li>
+                    <li>Assegurar a supervisão da atividade.</li>
+                    <li>Fornecer EPIs adequados ao risco, como cinto de segurança tipo paraquedista com talabarte de dupla perna, capacete com jugular, entre outros.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades do Trabalhador:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Cumprir as orientações de segurança e os treinamentos recebidos.</li>
+                    <li>Utilizar corretamente os EPIs fornecidos.</li>
+                    <li>Comunicar ao superior qualquer situação de risco.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Planejamento e Organização:</strong> A norma exige que o trabalho em altura seja:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Planejado, com identificação e controle de riscos.</li>
+                    <li>Organizado, com definição de responsabilidades.</li>
+                    <li>Executado com segurança, considerando as condições climáticas, integridade dos equipamentos e aptidão dos trabalhadores.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Medidas de Proteção:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Coletiva: guarda-corpos, plataformas de trabalho, redes de proteção.</li>
+                    <li>Individual: cinturões, sistemas de ancoragem e linhas de vida.</li>
+                    <li>Emergência e resgate: deve haver plano e equipe preparada para possíveis resgates.</li>
+                </ul>
+            </div>
+            
+            <a href="{{ url_for('summary') }}" class="button fade-in">Voltar ao Sumário</a>
+            <a href="{{ url_for('electricity') }}" class="button fade-in">Próximo Tópico</a>
+        </main>
+    </div>
+</body>
+</html>

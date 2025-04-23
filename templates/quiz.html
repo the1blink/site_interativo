@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança na Obra - Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='quiz.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="quiz-title">Quiz de Segurança no Trabalho</h1>
+        </header>
+        <main>
+            {% if not quiz_completed %}
+                <!-- Mostrar a pergunta atual -->
+                <div class="question">
+                    <h2>{{ current_question.text }}</h2>
+                    <form method="POST" action="{{ url_for('quiz') }}">
+                        <input type="hidden" name="question_index" value="{{ current_question_index }}">
+                        <div class="options-grid">
+                            {% for option in current_question.options %}
+                                <button type="submit" name="answer" value="{{ loop.index0 }}" class="option-button">
+                                    {{ option }}
+                                </button>
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
+            {% else %}
+                <!-- Mostrar resultados -->
+                <div class="results">
+                    <p>Você acertou {{ score }} de {{ total_questions }} perguntas!</p>
+                    <h3>Gabarito:</h3>
+                    <ul>
+                        {% for question, user_answer, correct_answer in answers %}
+                            <li>
+                                {{ question.text }}<br>
+                                Sua resposta: <span class="{% if user_answer == correct_answer %}correct-answer{% else %}user-answer{% endif %}">{{ question.options[user_answer] }}</span><br>
+                                {% if user_answer != correct_answer %}
+                                    Resposta correta: <span class="correct-answer">{{ question.options[correct_answer] }}</span>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ url_for('summary') }}" class="back-button">Voltar ao Sumário</a>
+                </div>
+            {% endif %}
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipamentos de Proteção Individual (EPI)</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">NR-6 – Equipamentos de Proteção Individual (EPI)</h1>
+            <!-- Imagem no topo -->
+            <img src="{{ url_for('static', filename='epis-image.jpg') }}" alt="Imagem ilustrativa sobre EPIs" class="topic-image fade-in">
+        </header>
+        <main>
+            <p class="intro fade-in">
+                A Norma Regulamentadora nº 6 (NR-6) estabelece os requisitos para aprovação, comercialização, fornecimento e utilização de Equipamentos de Proteção Individual (EPIs), visando à proteção da saúde e integridade física dos trabalhadores.
+            </p>
+            <h2 class="section-title fade-in">Pontos-chave da NR-6:</h2>
+            <div class="key-points">
+                <p class="key-point fade-in">
+                    <strong>Definição de EPI:</strong> EPI é todo dispositivo ou produto, de uso individual, utilizado pelo trabalhador, destinado à proteção contra riscos suscetíveis de ameaçar a segurança e a saúde no trabalho.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades do Empregador:</strong> Conforme a NR-6, cabe ao empregador:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Adquirir o EPI adequado ao risco de cada atividade.</li>
+                    <li>Exigir seu uso.</li>
+                    <li>Fornecer ao trabalhador, gratuitamente, EPIs aprovados pelo órgão nacional competente em matéria de segurança e saúde no trabalho.</li>
+                    <li>Orientar e treinar o trabalhador sobre o uso adequado, guarda e conservação.</li>
+                    <li>Substituir imediatamente o EPI, quando danificado ou extraviado.</li>
+                    <li>Responsabilizar-se pela higienização e manutenção periódica.</li>
+                    <li>Comunicar ao órgão competente qualquer irregularidade observada.</li>
+                    <li>Registrar o fornecimento ao trabalhador.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Responsabilidades do Trabalhador:</strong> O trabalhador deve:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Utilizar o EPI apenas para a finalidade a que se destina.</li>
+                    <li>Responsabilizar-se pela guarda e conservação.</li>
+                    <li>Comunicar ao empregador qualquer alteração que o torne impróprio para uso.</li>
+                    <li>Cumprir as determinações do empregador sobre o uso adequado.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Certificado de Aprovação (CA):</strong> Todo EPI deve possuir o Certificado de Aprovação (CA), emitido pelo órgão nacional competente em matéria de segurança e saúde no trabalho, como garantia de sua eficácia e qualidade.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Circunstâncias de Uso:</strong> A utilização de EPIs é obrigatória quando:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>As medidas de proteção coletiva não forem suficientes para a eliminação dos riscos.</li>
+                    <li>Durante a implantação de medidas de proteção coletiva.</li>
+                    <li>Em situações de emergência.</li>
+                </ul>
+            </div>
+            
+            <a href="{{ url_for('summary') }}" class="button fade-in">Voltar ao Sumário</a>
+            <a href="{{ url_for('height') }}" class="button fade-in">Próximo Tópico</a>
+        </main>
+    </div>
+</body>
+</html>

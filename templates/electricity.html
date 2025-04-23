@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalações e Serviços em Eletricidade</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='logo.png') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='common.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='topic.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title fade-in">NR-10 – Segurança em Instalações e Serviços em Eletricidade</h1>
+            <!-- Imagem no topo -->
+            <img src="{{ url_for('static', filename='electricity-image.jpg') }}" alt="Imagem ilustrativa sobre segurança em eletricidade" class="topic-image fade-in">
+        </header>
+        <main>
+            <p class="intro fade-in">
+                A Norma Regulamentadora nº 10 (NR-10) estabelece os requisitos e condições mínimas para garantir a segurança e a saúde dos trabalhadores que atuam direta ou indiretamente em instalações elétricas e serviços com eletricidade, em qualquer fase (projeto, construção, montagem, operação, manutenção, etc.).
+            </p>
+            <h2 class="section-title fade-in">Pontos-chave da NR-10:</h2>
+            <div class="key-points">
+                <p class="key-point fade-in">
+                    <strong>Abrangência:</strong> Aplica-se a todas as atividades que envolvem instalações elétricas energizadas ou desenergizadas, inclusive em baixa tensão.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Treinamento Obrigatório:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Todos os trabalhadores devem receber treinamento específico em segurança elétrica, com carga horária mínima de 40 horas, válido por 2 anos.</li>
+                    <li>É exigido curso de reciclagem e atualização periódica.</li>
+                    <li>A capacitação deve abordar: riscos elétricos, medidas de controle, procedimentos de trabalho, uso de EPIs e EPCs, legislação e primeiros socorros.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Documentação e Responsabilidades:</strong> As empresas devem manter um Prontuário das Instalações Elétricas, contendo:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Diagramas unifilares.</li>
+                    <li>Especificações de dispositivos de proteção.</li>
+                    <li>Procedimentos de segurança e manutenção.</li>
+                </ul>
+                <p class="key-point fade-in">
+                    É responsabilidade do empregador:
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Garantir a segurança das instalações e dos serviços.</li>
+                    <li>Implementar medidas de controle coletivo e individual.</li>
+                    <li>Manter a documentação atualizada.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Medidas de Controle:</strong>
+                </p>
+                <ul class="key-list fade-in">
+                    <li>Desenergização como medida prioritária.</li>
+                    <li>Caso o serviço precise ser feito com energia, devem ser adotadas técnicas e equipamentos específicos, com sinalização e isolamento da área.</li>
+                    <li>Uso obrigatório de EPIs como luvas, roupas isolantes, ferramentas com isolamento e protetores faciais.</li>
+                </ul>
+            
+                <p class="key-point fade-in">
+                    <strong>Trabalho em Altura e Espaços Confinados:</strong> Quando o serviço elétrico envolver altura ou espaço confinado, devem ser observadas também as normas NR-35 e NR-33.
+                </p>
+            
+                <p class="key-point fade-in">
+                    <strong>Sistema de Proteção Contra Descargas Atmosféricas (SPDA):</strong> A norma exige que edificações e sistemas elétricos possuam proteção contra raios, conforme normas técnicas (como a NBR 5419).
+                </p>
+            </div>
+            
+            <a href="{{ url_for('summary') }}" class="button fade-in">Voltar ao Sumário</a>
+            <a href="{{ url_for('machines') }}" class="button fade-in">Próximo Tópico</a>
+        </main>
+    </div>
+</body>
+</html>
